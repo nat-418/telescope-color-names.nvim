@@ -1,6 +1,8 @@
 telescope-color-names.nvim
 ==========================
 
+![color names](./colors.jpg)
+
 This Neovim plugin is an extension to the
 [Telescope](https://github.com/nvim-telescope/telescope.nvim) fuzzy-finder.
 It allows picking an X11 / web color name, like `PapayaWhip` or `LemonChiffon`.

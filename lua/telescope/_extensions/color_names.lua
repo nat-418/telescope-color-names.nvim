@@ -30,13 +30,15 @@ local color_names_list = {
   'DarkOliveGreen', 'ForestGreen', 'SeaGreen', 'Olive', 'OliveDrab',
   'MediumSeaGreen', 'LimeGreen', 'Lime', 'SpringGreen', 'MediumSpringGreen',
   'DarkSeaGreen', 'MediumAquamarine', 'YellowGreen', 'LawnGreen',
-  'Chartreuse', 'LightGreen', 'GreenYellow', 'PaleGreen',
+  'Chartreuse', 'LightGreen', 'GreenYellow', 'PaleGreen'
 }
 
 local attach_mappings = function(prompt_bufnr, _)
   actions.select_default:replace(function()
     actions.close(prompt_bufnr)
+
     local selection = actions_state.get_selected_entry()
+
     vim.api.nvim_put({ selection[1] }, '', false, true)
   end)
 
@@ -47,9 +49,9 @@ local run = function(opts)
   opts = opts or {}
 
   local picker = pickers.new(opts, {
-    prompt_title = "Color Names",
-    finder = finders.new_table({ results = color_names_list }),
-    sorter = conf.generic_sorter(opts),
+    prompt_title    = 'Color Names',
+    finder          = finders.new_table({ results = color_names_list }),
+    sorter          = conf.generic_sorter(opts),
     attach_mappings = attach_mappings
   })
 
