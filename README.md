@@ -1,7 +1,5 @@
-telescope-color-names.nvim
-==========================
-
-![color names](./colors.jpg)
+telescope-color-names.nvim 🎨
+=============================
 
 This Neovim plugin is an extension to the
 [Telescope](https://github.com/nvim-telescope/telescope.nvim) fuzzy-finder.
